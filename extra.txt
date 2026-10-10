@@ -1,0 +1,17 @@
+/*const tableHTML = `
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px;" border="1">
+            <tbody>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #ccc;">Row 1, Col 1</td>
+                    <td style="padding: 8px; border: 1px solid #ccc;">Row 1, Col 2</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #ccc;">Row 2, Col 1</td>
+                    <td style="padding: 8px; border: 1px solid #ccc;">Row 2, Col 2</td>
+                </tr>
+            </tbody>
+        </table>
+        <br> `;
+
+    // Insert the HTML exactly at the cursor's location
+    document.execCommand("insertHTML", false, tableHTML);*/

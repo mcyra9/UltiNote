@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UltiNote: the ultimate note-taking website with complex formatting and styling.">
+    <title>UltiNote</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <div id="title">
+            <h1>UltiNote</h1>
+        </div>
+        <!-- keeps the header at the top while scrolling -->
+        <div id="sticky-container">
+            <div id="tabs">
+                <div class="buttons">
+                    <div class="icon" id="new"></div>
+                    <div class="icon" id="open"></div>
+                    <input type="file" id="fileInput" style="display: none;" />
+                    <div class="icon" id="save"></div>
+                </div>
+                <div id="tabar">
+                </div>
+            </div>
+            <div id="toolbar">
+                <div class="buttons">
+                    <div class="icon" title="clear" id="clear"></div>
+                    <div class="icon" title="bold" id="bold"></div>
+                    <div class="icon" title="italic" id="italic"></div>
+                    <div class="icon" title="underline" id="underline"></div>
+                    <div class="icon" title="strikethrough" id="strikethrough"></div>
+
+                    <div class="break"></div>
+
+                    <div class="icon" title="background" id="background"></div>
+                    <div class="icon" title="font color" id="fontColor"></div>
+                    <div class="icon" title="font size" id="fontSize"></div>
+                    
+                    <div class="break"></div>
+
+                    <div class="icon" title="unordered list" id="unorderedList"></div>
+                    <div class="icon" title="ordered list" id="orderedList"></div>
+                    <div class="icon" title="horizontal rule" id="horizontalRule"></div>
+                    
+                    <div class="break"></div>
+                    
+                    <div class="icon" title="align left" id="alignLeft"></div>
+                    <div class="icon" title="align center" id="alignCenter"></div>
+                    <div class="icon" title="other alignments" id="alignOther"></div>
+                    
+                    <div class="break"></div>
+                    
+                    <div class="icon" title="superscript" id="superscript"></div>
+                    <div class="icon" title="subscript" id="subscript"></div>
+                    <div class="icon" title="symbols and special characters" id="symbols"></div>
+                    <div class="icon" title="insert tables" id="tableBtn"></div>
+                    <div class="icon" title="checkboxes" id="checkbox"></div>
+
+                    <div class="break"></div>
+
+                    <div class="icon" title="fractions" id="fraction"></div>
+                    <div class="icon" title="square root" id="sqrt"></div>
+                    <div class="icon" title="radicals and roots" id="radical"></div>
+                </div>
+            </div>
+        </div>
+            <!-- Submenus -->
+                <div class="submenu" id="bgColourMenu">
+                    <p id="bgColourLabel" title="set background color for parent?"><input type="checkbox" id="bgColourCheckbox"></p>
+                    <p style="color: white;">white</p>
+                    <p style="color: black;">black</p>
+                    <p style="color: red;">red</p>
+                    <p style="color: orange;">orange</p>
+                    <p style="color: yellow;">yellow</p>
+                    <p style="color: green;">green</p>
+                    <p style="color: blue;">blue</p>
+                    <p style="color: indigo;">indigo</p>
+                    <p style="color: violet;">violet</p>
+                </div>
+                <div class="submenu" id="fontColourMenu">
+                    <p style="color: white;">white</p>
+                    <p style="color: black;">black</p>
+                    <p style="color: red;">red</p>
+                    <p style="color: orange;">orange</p>
+                    <p style="color: yellow;">yellow</p>
+                    <p style="color: green;">green</p>
+                    <p style="color: blue;">blue</p>
+                    <p style="color: indigo;">indigo</p>
+                    <p style="color: violet;">violet</p>
+                </div>
+                <div class="submenu" id="fontSizeMenu">
+                    <p data-size="1" style="font-size: 10px;">10px</p>
+                    <p data-size="2" style="font-size: 12px;">12px</p>
+                    <p data-size="3" style="font-size: 14px;">14px</p>
+                    <p data-size="4" style="font-size: 16px;">16px</p>
+                    <p data-size="5" style="font-size: 18px;">18px</p>
+                    <p data-size="6" style="font-size: 20px;">20px</p>
+                    <p data-size="7" style="font-size: 22px;">22px</p>
+                </div>
+                <div class="submenu" id="alignMenu">
+                    <p id="alignLeftOption">Align Left</p>
+                    <p id="alignCenterOption">Align Center</p>
+                    <p id="alignRightOption">Align Right</p>
+                    <p id="alignJustifyOption">Justify</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;" class="submenu" id="symbolsMenu">
+                    <p style="font-size: 20px; margin: 1px;">°</p>
+                    <p style="font-size: 20px; margin: 1px;">Δ</p>
+                    <p style="font-size: 20px; margin: 1px;">—</p>
+                    <p style="font-size: 20px; margin: 1px;">&#174;</p>
+                    <p style="font-size: 20px; margin: 1px;">&#8482;</p>    
+                    <p style="font-size: 20px; margin: 1px;">±</p>
+                    <p style="font-size: 20px; margin: 1px;">≈</p>
+                    <p style="font-size: 20px; margin: 1px;">&#163;</p>
+                    <p style="font-size: 20px; margin: 1px;">&#165;</p>
+                    <p style="font-size: 20px; margin: 1px;">&#8364;</p>
+                    <p style="font-size: 20px; margin: 1px;">∴</p>
+                    <p style="font-size: 20px; margin: 1px;">∑</p>
+                    <p style="font-size: 20px; margin: 1px;">∈</p>
+                    <p style="font-size: 20px; margin: 1px;">←</p>
+                    <p style="font-size: 20px; margin: 1px;">→</p>
+                    <p style="font-size: 20px; margin: 1px;">↑</p>
+                    <p style="font-size: 20px; margin: 1px;">↓</p>            
+                    <p style="font-size: 20px; margin: 1px;">⇐</p>
+                    <p style="font-size: 20px; margin: 1px;">⇒</p>
+                    <p style="font-size: 20px; margin: 1px;">⇑</p>
+                    <p style="font-size: 20px; margin: 1px;">⇓</p>
+                    <!--<p style="font-size: 20px; margin: 1px;">⇆</p>-->
+                </div>
+                <div class="submenu" id="tableMenu">
+                    <p style="margin: 1px;">Insert Table</p>
+                    <input type="number" id="tableRows" placeholder="Rows" min="1" style="width: 60px; margin: 1px;">
+                    <input type="number" id="tableCols" placeholder="Columns" min="1" style="width: 60px; margin: 1px;">
+                    <button id="insertTableBtn" style="margin: 1px;">Insert</button>
+                </div>
+                <div class="submenu" id="saveMenu" style="display:grid; width: 30px;">
+                    <p>save locally</p>
+                    <input type="text" id="downloadName" Placeholder="file name">
+                    <select id="downloadFormat">
+                        <option value="html">HTML</option>
+                    </select>
+                    <button id="downloadBtn">download</button>
+                </div>
+            
+        
+    <div id="textspace" contenteditable="true">
+    </div>
+    <script src="script.js"></script>
+    <script src="menus.js"></script>
+    <script src="file.js"></script>
+    <script src="iconInnit.js"></script>
+</body>
+</html>

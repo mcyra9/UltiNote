@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+}
+
+#title {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#tabs {
+    background-color: #444;
+    color: white;  
+    height: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+
+.tab {
+    height: 22px;
+    width: 60px;
+    background-color: #777;
+    border: 1px solid #555;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#tabar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#sticky-container {
+    position: sticky;
+    top: 0; /* Tells the container to stick exactly at the top of the screen */
+    z-index: 100; /* Ensures the header stays visually ON TOP of the scrolling text */
+    
+    /* Optional: Add a slight shadow to make it pop over the text */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+#toolbar {
+    background-color: #575757;
+    color: white;
+    height: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.break {
+    width: 12px;
+    height: 1px;
+    opacity: 0;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;      /* Centers content vertically */
+    justify-content: center;  /* Optional: Centers content horizontally */
+    text-align: center;
+    background-color: #777;
+    margin: 0 5px;
+}
+
+.submenu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin: 5px;
+
+    width: auto;
+    height: auto;
+    background: rgba(128, 128, 128, 0.5); /* semitransparent grey */
+}
+
+.submenu p {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: inherit; /* use the color of the parent element */
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.active p {
+    display: block;
+}
+
+
+#textspace {
+    background-color: #f0f0f0;
+    height: 100%;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* textspace element styles */
+
+#textspace ol, #textspace ul {
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse; /* Merges borders so hitboxes are accurate */
+    table-layout: fixed; /* Forces the browser to strictly obey drag widths */
+}
+
+td, th {
+    border: 1px solid #ccc;
+    padding: 5px;
+    word-wrap: break-word; /* Prevents long text from breaking the column width */
+}
+
+/*#textspace img {
+    overflow: auto;    /* Required for 'resize' to work 
+    resize: both;      /* Allows resizing horizontally and vertically 
+    min-width: 150px;  /* Optional safety constraint 
+    min-height: 100px; /* Optional safety constraint 
+}*/
