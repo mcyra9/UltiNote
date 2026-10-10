@@ -80,7 +80,7 @@ function loadFromLocalStorage() {
         });
         console.log("Tabs loaded from local storage", currentTab, tabList);
     } else {
-        console.warn("hellp no data", tabList);
+        console.log("cannot load, no data existing data");
     }
 }
 
